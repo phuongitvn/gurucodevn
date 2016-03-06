@@ -6,7 +6,7 @@ body {
   height: 100%;
   background-color: #ecf0f1;
   font-size: 13px;
-  font-family: 'Lato', sans-serif;
+  #font-family: 'Lato'!important;
   position: relative;
 }
 html {
@@ -391,7 +391,7 @@ input:focus {
 }
 .main-menu li ul.submenu li a {
   color: #6c7a8c;
-  padding-left: 55px;
+  padding-left: 45px;
 }
 .main-menu li ul.submenu li:hover {
   border-left: 2px solid #252b33;

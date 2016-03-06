@@ -9,19 +9,12 @@ $controller = Yii::app()->controller->getId();
 			<span>Dashboard</span>
 		</a>
 	</li>
-	<li>
-		<a href="<?php echo Yii::app()->createUrl('/news/news/admin');?>">
-			<i class="fa fa-home"></i>
-			<span>Angular APP</span>
-			<span class="menu-notification">new</span>
-		</a>
-	</li>
 	<li class="has-submenu">
-		<a href="http://creativico.com/admin-templates/PixProV2/index.html#">
-			<i class="fa fa-cog"></i>
+		<a href="#">
+			<i class="fa fa-database"></i>
 			<span>Quản trị nội dung</span>
 		</a>
-		<ul class="submenu">
+		<ul class="submenu" style="display: none">
 			<li>
 				<a href="<?php echo Yii::app()->createUrl('/news/news/admin');?>">
 					<i class="fa fa-newspaper-o"></i>
@@ -30,22 +23,69 @@ $controller = Yii::app()->controller->getId();
 			</li>
 			<li>
 				<a href="<?php echo Yii::app()->createUrl('/news/categories/admin');?>">
-					<i class="fa fa-tasks"></i>
+					<i class="fa fa-cube"></i>
 					<span>Quản lý chủ đề</span></a>
 			</li>
 			<li>
 				<a href="<?php echo Yii::app()->createUrl('/files/files/admin');?>"><i class="fa fa-files-o"></i><span>Quản lý File</span></a>
 			</li>
 			<li>
-				<a href="<?php echo Yii::app()->createUrl('/news/pages/admin');?>"><i class="fa fa-spencil-square-o"></i><span><?php echo Yii::t('main','Pages Manager')?></span></a>
+				<a href="<?php echo Yii::app()->createUrl('/news/pages/admin');?>"><i class="fa fa-pencil-square-o"></i><span><?php echo Yii::t('main','Pages Manager')?></span></a>
 			</li>
 			<li>
-				<a href="<?php echo Yii::app()->createUrl('/menu/menus/admin');?>"><i class="fa fa-folder"></i><span><?php echo Yii::t('main','Media Manager')?></span></a>
+				<a href="<?php echo Yii::app()->createUrl('/menu/menus/admin');?>"><i class="fa fa-align-justify"></i><span><?php echo Yii::t('main','Menu Manager')?></span></a>
 			</li>
 			<li>
 				<a href="<?php echo Yii::app()->createUrl('/gallery/galleryItems/admin');?>">
-					<i class="fa fa-folder"></i>
+					<i class="fa fa-photo"></i>
 					<span><?php echo Yii::t('main','Gallery Manager')?></span>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo Yii::app()->createUrl('/polls/poll/admin');?>">
+					<i class="fa fa-tasks"></i>
+					<span><?php echo Yii::t('main','Polls Manager')?></span>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo Yii::app()->createUrl('/blog/post/admin');?>">
+					<i class="fa fa-sticky-note"></i>
+					<span><?php echo Yii::t('main','Blog Manager')?></span>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo Yii::app()->createUrl('/comment/manage/admin');?>">
+					<i class="fa fa-comments"></i>
+					<span><?php echo Yii::t('main','Comment Manager')?></span>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo Yii::app()->createUrl('/widget/manage/admin');?>">
+					<i class="fa fa-cubes"></i>
+					<span><?php echo Yii::t('main','Widgets Manager')?></span>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo Yii::app()->createUrl('/translate/filterTranslate/Filterlayout');?>">
+					<i class="fa fa-globe"></i>
+					<span><?php echo Yii::t('main','Languages Manager')?></span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="has-submenu">
+		<a href="<?php echo Yii::app()->createUrl('/settings');?>">
+			<i class="fa fa-cog"></i>
+			<span><?php echo Yii::t('main','Settings')?></span>
+		</a>
+		<ul class="submenu" style="display: none">
+			<li><a class="<?php if($module =='settings' && $controller=='system') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/settings/system');?>">
+					<i class="fa fa-info-circle"></i>
+					<span><?php echo Yii::t('main','General Setting')?></span>
+				</a></li>
+			<li><a class="" href="<?php echo Yii::app()->createUrl('/srbac');?>">
+					<i class="fa fa-key"></i>
+					<span><?php echo Yii::t('main','Quyền truy cập')?></span>
 				</a>
 			</li>
 		</ul>

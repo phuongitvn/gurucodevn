@@ -177,7 +177,7 @@ $form = $this->beginWidget('GxActiveForm', array(
 		</div><!-- row -->
 		<div class="row">
 			<div class="col-md-2">
-			<?php echo $form->labelEx($model,'comment'); ?>
+				<label><?php echo Yii::t('main','Cho phép bình luận'); ?></label>
 			</div>
 			<div class="col-md-10">
 			<?php echo $form->checkBox($model, 'comment', array('class'=>'icheck-blue')); ?>
@@ -199,6 +199,13 @@ $form = $this->beginWidget('GxActiveForm', array(
 		</div>
 	</div>
 </div>
+	<div class="row">
+		<div class="col-md-12">
+			<button type="submit" class="btn btn-sm btn-primary" ><i class="fa fa-save"></i>&nbsp;<?php echo Yii::t('main','Save');?></button>
+			<button type="submit" class="btn btn-sm btn-primary" ><i class="fa fa-save"></i>&nbsp;<?php echo Yii::t('main','Save & Continue');?></button>
+			<button type="submit" class="btn btn-sm btn-default" ><i class="fa fa-close"></i>&nbsp;<?php echo Yii::t('main','Close');?></button>
+		</div>
+	</div>
 <input type="hidden" name="apply" id="apply" value="0" />
 <?php
 $this->endWidget();
